@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="How Anti-Frontrunner checks domain availability in your browser via DNS-over-HTTPS—no backend, no search logging." />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <meta name="theme-color" content="#000000" />
+  <link rel="canonical" href="https://privatedomainsearch.com/how-it-works.html" />
+  <title>How it works — Anti-Frontrunner</title>
+  <link rel="icon" href="/assets/favicon-32.png" type="image/png" sizes="32x32" />
+  <link rel="icon" href="/assets/favicon-48.png" type="image/png" sizes="48x48" />
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/tailwind.css" />
+  <link rel="stylesheet" href="/assets/subpage.css" />
+</head>
+<body class="min-h-screen flex flex-col font-sans antialiased bg-app text-text">
+  <nav class="site-nav" aria-label="Site">
+    <a class="site-nav-link" href="/">Home</a>
+    <a class="site-nav-link is-active" href="/how-it-works.html">How it works</a>
+    <a class="site-nav-link" href="/vs-other-sites.html">Compared to other sites</a>
+  </nav>
+
+  <main class="page-shell">
+    <header class="page-hero">
+      <h1>How it works</h1>
+      <p class="lede">Anti-Frontrunner checks domain availability from your browser using public DNS&mdash;never a search backend that can log, front-run, or steal your ideas.</p>
+    </header>
+
+    <div class="content-card">
+      <h2>What happens when you search</h2>
+      <ol class="steps">
+        <li>
+          <span class="step-num" aria-hidden="true">1</span>
+          <span>You type a keyword or full domain in the search bar. That text stays on your device&mdash;Anti-Frontrunner has no server that receives it.</span>
+        </li>
+        <li>
+          <span class="step-num" aria-hidden="true">2</span>
+          <span>Your browser builds a list of names to check across 16 popular extensions, ordered by your TLD priority region.</span>
+        </li>
+        <li>
+          <span class="step-num" aria-hidden="true">3</span>
+          <span>For each name, your browser asks public DNS resolvers whether a record exists. No record usually means the name may be available.</span>
+        </li>
+        <li>
+          <span class="step-num" aria-hidden="true">4</span>
+          <span>Results appear in place. If a name looks available, Register links take you to registrars&mdash;only when you choose to buy.</span>
+        </li>
+      </ol>
+    </div>
+
+    <div class="content-card">
+      <h2>DNS, not registrar search</h2>
+      <p>Most domain tools send your query to a registrar or broker API. That server can keep a log of what you typed&mdash;and domain frontrunners watch for exactly that.</p>
+      <p>Anti-Frontrunner uses a different path: <strong>DNS-over-HTTPS</strong> lookups from your browser to Cloudflare and Google. We never sit in the middle. Your keywords are not stored on our infrastructure because there is no infrastructure for searches.</p>
+    </div>
+
+    <div class="content-card">
+      <h2>Split across two resolvers</h2>
+      <p>Eight TLD checks go to Cloudflare DNS; eight go to Google Public DNS. All requests leave your device directly. Those providers have their own privacy policies and may see the domain names you look up plus your IP address.</p>
+      <p>We split traffic to spread load and stay resilient&mdash;not to collect data. Anti-Frontrunner does not proxy or log those requests.</p>
+    </div>
+
+    <div class="content-card">
+      <h2>What &ldquo;available&rdquo; means here</h2>
+      <p>Available means no DNS record was found for that name&mdash;a useful signal, not a registrar guarantee. Parked domains, premium inventory, and reserved names can still show as available or taken incorrectly.</p>
+      <p>Always confirm price and registration at checkout before you count on a result.</p>
+    </div>
+
+    <div class="content-card">
+      <h2>What we store locally</h2>
+      <p>Your <strong>TLD priority region</strong> (Global, US, UK, and so on) is saved in <code class="font-mono text-white/80">localStorage</code> so ordering stays consistent between visits. That preference never leaves your browser unless you clear site data.</p>
+    </div>
+
+    <div class="cta-bar">
+      <p>Ready to search without sending your ideas to a middleman?</p>
+      <a class="cta-link" href="/">Open domain search</a>
+    </div>
+  </main>
+
+  <footer class="page-footer">
+    <p>
+      <a href="/">Home</a>
+      <span aria-hidden="true"> · </span>
+      <a href="/vs-other-sites.html">Compared to other sites</a>
+      <span aria-hidden="true"> · </span>
+      <a href="/privacy.html">Privacy</a>
+      <span aria-hidden="true"> · </span>
+      <a href="https://github.com/michaelssen/anti-frontrunner" target="_blank" rel="noopener noreferrer">Source</a>
+    </p>
+  </footer>
+</body>
+</html>

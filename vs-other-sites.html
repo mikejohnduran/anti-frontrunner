@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Compare Anti-Frontrunner to typical domain search tools—privacy, logging, frontrunning risk, and DNS-based availability checks." />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <meta name="theme-color" content="#000000" />
+  <link rel="canonical" href="https://privatedomainsearch.com/vs-other-sites.html" />
+  <title>Compared to other sites — Anti-Frontrunner</title>
+  <link rel="icon" href="/assets/favicon-32.png" type="image/png" sizes="32x32" />
+  <link rel="icon" href="/assets/favicon-48.png" type="image/png" sizes="48x48" />
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/tailwind.css" />
+  <link rel="stylesheet" href="/assets/subpage.css" />
+</head>
+<body class="min-h-screen flex flex-col font-sans antialiased bg-app text-text">
+  <nav class="site-nav" aria-label="Site">
+    <a class="site-nav-link" href="/">Home</a>
+    <a class="site-nav-link" href="/how-it-works.html">How it works</a>
+    <a class="site-nav-link is-active" href="/vs-other-sites.html">Compared to other sites</a>
+  </nav>
+
+  <main class="page-shell">
+    <header class="page-hero">
+      <h1>Compared to other sites</h1>
+      <p class="lede">Most domain search tools are built for speed and upsells. Anti-Frontrunner is built so your searches stay on your device&mdash;and out of a logging pipeline that can invite frontrunning.</p>
+    </header>
+
+    <div class="compare-wrap">
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th scope="col">Topic</th>
+            <th scope="col">Typical domain search</th>
+            <th scope="col">Anti-Frontrunner</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Where lookups run</td>
+            <td>Registrar or broker servers</td>
+            <td class="us">Your browser (client-side)</td>
+          </tr>
+          <tr>
+            <td>Search logging risk</td>
+            <td>Often logged by the operator</td>
+            <td class="us">No Anti-Frontrunner backend to log</td>
+          </tr>
+          <tr>
+            <td>Frontrunning exposure</td>
+            <td>Higher when searches are centralized</td>
+            <td class="us">Lower&mdash;no search server in the middle</td>
+          </tr>
+          <tr>
+            <td>How availability is checked</td>
+            <td>Registrar inventory APIs</td>
+            <td class="us">Public DNS (DoH)</td>
+          </tr>
+          <tr>
+            <td>Accuracy at checkout</td>
+            <td>Generally registrar-grade</td>
+            <td>Estimate&mdash;confirm before you pay</td>
+          </tr>
+          <tr>
+            <td>Account required</td>
+            <td>Often for advanced features</td>
+            <td class="us">No account</td>
+          </tr>
+          <tr>
+            <td>Extensions checked</td>
+            <td>Often hundreds</td>
+            <td class="us">16 popular TLDs per search</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="content-card">
+      <h2>When a registrar search makes sense</h2>
+      <p>If you need registrar-grade certainty, premium pricing, or hundreds of extensions in one sweep, a registrar&rsquo;s own search is the right tool at checkout time.</p>
+      <p>Anti-Frontrunner is for the step before that: exploring names privately, without handing every idea to a server that might remember them.</p>
+    </div>
+
+    <div class="content-card">
+      <h2>When Anti-Frontrunner makes sense</h2>
+      <ul>
+        <li>You are brainstorming names and do not want searches logged on a third-party backend.</li>
+        <li>You care about domain frontrunning and want DNS checks from your device.</li>
+        <li>You want a fast read across popular TLDs without creating an account.</li>
+        <li>You understand results are DNS-based estimates&mdash;not a final registrar quote.</li>
+      </ul>
+    </div>
+
+    <div class="content-card">
+      <h2>The honest tradeoff</h2>
+      <p>Privacy and speed of iteration come with a tradeoff: DNS can be wrong about parked, premium, or reserved names. We would rather show you a cautious estimate than run your keywords through a searchable database we control.</p>
+      <p>That is the point. <strong>Your search stays on your device.</strong> Sellers only enter the picture when you hit Register.</p>
+    </div>
+
+    <div class="cta-bar">
+      <p>Try a privacy-first search across 16 extensions.</p>
+      <a class="cta-link" href="/">Open domain search</a>
+    </div>
+  </main>
+
+  <footer class="page-footer">
+    <p>
+      <a href="/">Home</a>
+      <span aria-hidden="true"> · </span>
+      <a href="/how-it-works.html">How it works</a>
+      <span aria-hidden="true"> · </span>
+      <a href="/privacy.html">Privacy</a>
+      <span aria-hidden="true"> · </span>
+      <a href="https://github.com/michaelssen/anti-frontrunner" target="_blank" rel="noopener noreferrer">Source</a>
+    </p>
+  </footer>
+</body>
+</html>
